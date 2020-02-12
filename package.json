@@ -1,0 +1,31 @@
+{
+  "name": "nal",
+  "version": "0.0.1",
+  "description": "Javascript Simple Date Formatter",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gist.github.com/10d896a373fd6868e3f4e13876f61fd2.git"
+  },
+  "keywords": [
+    "date",
+    "format"
+  ],
+  "author": "Green",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gist.github.com/10d896a373fd6868e3f4e13876f61fd2"
+  },
+  "homepage": "https://gist.github.com/10d896a373fd6868e3f4e13876f61fd2",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.6"
+  }
+}
