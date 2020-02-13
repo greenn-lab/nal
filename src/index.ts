@@ -7,49 +7,19 @@ Date.prototype._i18n = {
 
 Date.prototype._units = {
   yyyy: {
-    getter: Date.prototype.getFullYear,
-    setter: Date.prototype.setFullYear,
-    parserRegexp: /\d{4}/
+    get: Date.prototype.getFullYear,
+    set: Date.prototype.setFullYear,
+    parser: /\d{4}/
   },
   yy: {
-    getter: function (this: Date) {
+    get: function (this: Date) {
       return String(this.getFullYear()).substring(2)
     },
-    setter: function (this: Date, year: number) {
+    set: function (this: Date, year: number) {
       this.setFullYear(year)
     },
-    parserRegexp: /\d{2}/
+    parser: /\d{2}/
   }
-}
-
-Date.of = (date: string, pattern: string) => {
-  if (!date || !pattern)
-    return null
-
-  const groups: (RegExpExecArray | null)[] = []
-
-  pattern.replace(/([^yMdHhmsSa]*)(y+|M+|d+|H+|h+|m+|s+|S+|a)([^yMdHhmsSa]*)/g, (word: string) => {
-    groups.push(/([^yMdHhmsSa]*)(y+|M+|d+|H+|h+|m+|s+|S+|a)([^yMdHhmsSa]*)/.exec(word))
-    return ''
-  })
-
-  let index: number = 0
-  groups.forEach(function (group) {
-    if (group) {
-      var prefix = group[1],
-        unit = group[2],
-        suffix = group[3];
-
-      date.substring(index += prefix.length).replace(Date.prototype.UNIT_TOKEN[unit][0], function (token) {
-        Date.prototype.UNIT_TOKEN[unit][1].call(result, Number(token) || token);
-        index += token.length;
-      });
-
-      index += suffix.length;
-    }
-  });
-
-  return result
 }
 
 Date.prototype.format = function (pattern) {

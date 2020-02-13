@@ -1,9 +1,9 @@
 export {}
 
 interface DateUnit {
-  getter: (this: Date) => string | number
-  setter: (this: Date, value: number) => void
-  parserRegexp: RegExp
+  get: (this: Date) => string | number
+  set: (this: Date, value: number) => void
+  parser: RegExp
 }
 
 declare global {

@@ -12,14 +12,22 @@
     "moduleResolution": "node",
     "downlevelIteration": true,
     "sourceMap": true,
+    "types": [
+      "reflect-metadata",
+      "jest"
+    ],
     "typeRoots": [
       "./@types",
       "./node_modules/@types"
     ],
     "outDir": "dist"
   },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
-    "./src/**.ts",
-    "./@types/*.ts"
+    "./src/**/*.ts",
+    "./src/**/*.test.ts",
+    "./@types/*.d.ts"
   ]
 }
