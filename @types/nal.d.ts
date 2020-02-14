@@ -1,25 +1,19 @@
 export {}
 
-interface DateUnit {
-  get: (this: Date) => string | number
-  set: (this: Date, value: number) => void
-  parser: RegExp
-}
-
 declare global {
 
   interface Date {
     _i18n: {
-      month?: {
-        name: string[12] | ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-        abbreviation: string[12] | ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      month: {
+        names: [string, string, string, string, string, string, string, string, string, string, string, string]
+        abbreviations: [string, string, string, string, string, string, string, string, string, string, string, string]
       },
-      day?: {
-        name: string[7] | ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-        abbreviation: string[7] | ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+      day: {
+        names: [string, string, string, string, string, string, string]
+        abbreviations: [string, string, string, string, string, string, string]
       },
-      am?: string | 'AM',
-      pm?: string | 'PM'
+      am: string,
+      pm: string
     }
 
     _units: {
@@ -29,6 +23,12 @@ declare global {
     format: (pattern: string) => string
   }
 
+  interface DateUnit {
+    parse: (date: Date, text: string) => void
+    format: (date: Date, pattern: string) => string
+  }
+
+  // noinspection JSUnusedGlobalSymbols
   interface DateConstructor {
     of: (date: string, pattern: string) => Date
   }
