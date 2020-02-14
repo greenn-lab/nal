@@ -34,7 +34,7 @@ const units: { [key: string]: DateUnit } = {
       if (hours < 12 && text.includes(Date.prototype._i18n.pm))
         date.setHours(hours + 12)
     },
-    format: (date, pattern) =>
+    format: (date) =>
       Date.prototype._i18n[date.getHours() > 12 ? 'am' : 'pm']
   },
   H: {
