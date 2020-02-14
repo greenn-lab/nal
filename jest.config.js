@@ -1,4 +1,10 @@
-module.exprots = {
+/* eslint-disable */
+module.exports = {
     preset: 'ts-jest',
-    testEnvironment: 'node'
+    testEnvironment: 'node',
+    globals: {
+        'ts-jest': {
+            diagnostics: false
+        }
+    }
 }

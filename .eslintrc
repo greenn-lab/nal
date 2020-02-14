@@ -16,6 +16,10 @@
     "semi": [
       "warn",
       "never"
+    ],
+    "@typescript-eslint/indent": [
+      "warn",
+      2
     ]
   }
 }

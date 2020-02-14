@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "noImplicitAny": true,
+    "esModuleInterop": true,
     "lib": [
       "es6",
       "esnext",
@@ -12,10 +13,6 @@
     "moduleResolution": "node",
     "downlevelIteration": true,
     "sourceMap": true,
-    "types": [
-      "reflect-metadata",
-      "jest"
-    ],
     "typeRoots": [
       "./@types",
       "./node_modules/@types"
