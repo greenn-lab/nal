@@ -1,7 +1,7 @@
 import dateUnits from './units'
 import of from './of'
 
-Date.prototype._i18n = {
+Date.prototype.i18n = {
   month: {
     names: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     abbreviations: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -14,6 +14,6 @@ Date.prototype._i18n = {
   pm: 'PM'
 }
 
-Date.prototype._units = dateUnits
+Date.prototype.units = dateUnits
 
 Date.of = of

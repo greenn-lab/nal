@@ -3,7 +3,7 @@ export {}
 declare global {
 
   interface Date {
-    _i18n: {
+    i18n: {
       month: {
         names: [string, string, string, string, string, string, string, string, string, string, string, string]
         abbreviations: [string, string, string, string, string, string, string, string, string, string, string, string]
@@ -16,7 +16,7 @@ declare global {
       pm: string
     }
 
-    _units: {
+    units: {
       [key: string]: DateUnit
     }
 
@@ -24,7 +24,7 @@ declare global {
   }
 
   interface DateUnit {
-    parse: (date: Date, text: string) => void
+    parse: (date: Date, text: string, unit?: string) => void
     format: (date: Date, pattern: string) => string
   }
 
