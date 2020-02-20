@@ -34,9 +34,41 @@
     "no-console": "warn",
     "no-param-reassign": "off",
     "no-unused-vars": "warn",
+    "no-extend-native": [
+      "error",
+      {
+        "exceptions": [
+          "Date"
+        ]
+      }
+    ],
     "@typescript-eslint/indent": [
       "error",
       2
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/ignore": [
+      "node_modules"
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".ts",
+          ".js"
+        ]
+      }
+    },
+    "import/extensions": [
+      ".js",
+      ".ts"
     ]
   }
 }

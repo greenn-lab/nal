@@ -18,17 +18,17 @@ const units: DateUnits = {
   },
   M: {
     parse: (date, text, unit = ''): void => {
-      if (Date.prototype.i18n.month.names.includes(unit)) {
-        date.setMonth(Date.prototype.i18n.month.names.indexOf(text))
-      }
-
-      if (Date.prototype.i18n.month.abbreviations.includes(unit)) {
-        date.setMonth(Date.prototype.i18n.month.abbreviations.indexOf(text))
-      }
-
-      const monthNumber = Number(text)
-      if (monthNumber) {
-        date.setMonth(monthNumber - 1)
+      if (unit.length > 2) {
+        if (unit && Date.prototype.i18n.month.abbreviations.includes(unit)) {
+          date.setMonth(Date.prototype.i18n.month.abbreviations.indexOf(text))
+        } else if (Date.prototype.i18n.month.names.includes(unit)) {
+          date.setMonth(Date.prototype.i18n.month.names.indexOf(text))
+        }
+      } else {
+        const monthNumber = Number(text)
+        if (monthNumber) {
+          date.setMonth(monthNumber - 1)
+        }
       }
     },
     format: (date, pattern) => {

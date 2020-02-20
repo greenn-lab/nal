@@ -5,8 +5,10 @@ declare global {
   interface Date {
     i18n: {
       month: {
-        names: [string, string, string, string, string, string, string, string, string, string, string, string]
-        abbreviations: [string, string, string, string, string, string, string, string, string, string, string, string]
+        names: [string, string, string, string, string, string, string, string,
+          string, string, string, string]
+        abbreviations: [string, string, string, string, string, string, string,
+          string, string, string, string, string]
       },
       day: {
         names: [string, string, string, string, string, string, string]
