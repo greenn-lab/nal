@@ -21,7 +21,7 @@ new Date(2021, 2, 3, 14).format('d/M/yy h a')
 ```
 
 ## browser supported
->= IE 11 (use by babel with core-js 3)
+`>= IE 11` (use by babel with core-js 3)
 
 #### nal
 The nal is date in korean. It prounance /'nɑːl/.
