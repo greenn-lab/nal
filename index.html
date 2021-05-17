@@ -1,15 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>nal</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>날 - nal.js</title>
 </head>
-
 <body>
-<h1>About date</h1>
-<ol>
-  <li><code>Date.of</code> parsing purity date value to Date object.</li>
-</ol>
+<h1>hi, there. nal.js</h1>
 
+<pre id="output"></pre>
+
+<script src="./dist/nal.js"></script>
+<script>
+  var formatted = new Date().format('yyyy-MM-dd HH:mm:ss.SSS')
+
+  var output = [
+    formatted,
+    Date.of(formatted, 'yyyy-MM-dd HH:mm:ss.SSS')
+  ]
+
+  document.getElementById('output').innerHTML = output.join('\n')
+</script>
 </body>
 </html>

@@ -4,17 +4,17 @@
   "description": "Javascript Simple Date Formatter",
   "main": "src/index.ts",
   "scripts": {
-    "test": "jest --coverage",
-    "build": "webpack --mode production",
-    "serve": "webpack --hot --mode development"
+    "serve": "webpack server --hot --inline",
+    "build": "webpack --mode=production",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://gist.github.com/10d896a373fd6868e3f4e13876f61fd2.git"
   },
   "keywords": [
-    "date",
-    "format"
+    "date format",
+    "date parse"
   ],
   "author": "Green",
   "license": "MIT",
@@ -23,19 +23,22 @@
   },
   "homepage": "https://gist.github.com/10d896a373fd6868e3f4e13876f61fd2",
   "devDependencies": {
-    "@types/jest": "^25.1.2",
-    "@typescript-eslint/eslint-plugin": "^2.19.2",
-    "@typescript-eslint/parser": "^2.19.2",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/plugin-transform-runtime": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/runtime-corejs3": "^7.14.0",
+    "babel-jest": "^25.5.1",
+    "babel-loader": "^8.2.2",
+    "babelify": "^10.0.0",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.20.1",
-    "html-webpack-plugin": "^3.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "jest": "^25.1.0",
-    "ts-jest": "^25.2.0",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.5",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "prettier": "^2.3.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
